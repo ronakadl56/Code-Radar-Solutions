@@ -24,6 +24,9 @@ int main()
     else if(op == '/'){
         c=a/b;
         printf("%d/n", c);
-        
+
+    }
+    else{
+        printf("Invalid Operator");
     }
 }    
