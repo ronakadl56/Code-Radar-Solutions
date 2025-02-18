@@ -18,7 +18,4 @@ int main()
     else if(op=='/'){
     printf("%d", a/b);
     }
-    else{
-    printf("Not an operator");
-    }
     }
