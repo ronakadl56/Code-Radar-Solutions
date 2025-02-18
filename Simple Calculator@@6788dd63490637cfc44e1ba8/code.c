@@ -29,4 +29,5 @@ int main()
     else{
         printf("Invalid Operator");
     }
+    return 0;
 }    
