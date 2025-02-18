@@ -5,14 +5,19 @@ int main()
     char op;
     scanf("%d%d", &a, &b);
     scanf("%c", &op);
-    if(op=='+')
+    if(op=='+'){
     printf("%d", a+b);
-    else if(op=='-')
+    }
+    else if(op=='-'){
     printf("%d", a-b);
-    else if(op=='*')
+    }
+    else if(op=='*'){
     printf("%d", a*b);
-    else if(op=='/')
+    }
+    else if(op=='/'){
     printf("%d", a/b);
-    else
+    }
+    else{
     printf("Not an operator");
-}
+    }
+    }
