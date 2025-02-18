@@ -8,22 +8,27 @@ int main()
     scanf("%c", &op);
     if(op == '+'){
         c=a+b;
-        printf("%d\n", c);
+        printf("%d", c);
     
     }
     else if(op == '-'){
         c=a-b;
-        printf("%d/n", c);
+        printf("%d", c);
     
     }
     else if(op == '*'){
         c=a*b;
-        printf("%d/n", c);
+        printf("%d", c);
     
     }
     else if(op == '/'){
-        c=a/b;
-        printf("%d/n", c);
+        if(b!=0){
+            c=a/b;
+            printf("%d", c);
+        }
+        else{
+            printf("error");
+        }
 
     }
     else{
