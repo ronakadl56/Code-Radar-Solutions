@@ -5,17 +5,17 @@ int main()
     char op;
     scanf("%d", &a);
     scanf("%d", &b);
-    scanf("%c", &op);
-    if(op=='+'){
+    scanf(" %c", &op);
+    if(op == '+'){
     printf("%d\n", a+b);
     }
-    else if(op=='-'){
+    else if(op == '-'){
     printf("%d\n", a-b);
     }
-    else if(op=='*'){
+    else if(op == '*'){
     printf("%d\n", a*b);
     }
-    else if(op=='/'){
+    else if(op == '/'){
     printf("%d\n", a/b);
     }
     }
