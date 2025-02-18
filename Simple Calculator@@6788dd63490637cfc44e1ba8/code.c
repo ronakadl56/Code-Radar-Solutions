@@ -7,24 +7,23 @@ int main()
     scanf("%d", &b);
     scanf("%c", &op);
     if(op == '+'){
-    printf("%d\n", a+b);
+        c=a+b;
+        printf("%d\n", c);
+    
     }
     else if(op == '-'){
-    printf("%d\n", a-b);
+        c=a-b;
+        printf("%d/n", c);
+    
     }
     else if(op == '*'){
-    printf("%d\n", a*b);
+        c=a*b;
+        printf("%d/n", c);
+    
     }
     else if(op == '/'){
-        if(b!=0){
-            c=a/b;
-            printf("%d", c);
-        }
-        else{
-            printf("Error");
-        }
+        c=a/b;
+        printf("%d/n", c);
+        
     }
-    else{
-        printf("Invalid Operator");
-    }
-    }
+}    
