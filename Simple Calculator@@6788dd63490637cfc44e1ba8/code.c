@@ -7,15 +7,15 @@ int main()
     scanf("%d", &b);
     scanf("%c", &op);
     if(op=='+'){
-    printf("%d", a+b);
+    printf("%d\n", a+b);
     }
     else if(op=='-'){
-    printf("%d", a-b);
+    printf("%d\n", a-b);
     }
     else if(op=='*'){
-    printf("%d", a*b);
+    printf("%d\n", a*b);
     }
     else if(op=='/'){
-    printf("%d", a/b);
+    printf("%d\n", a/b);
     }
     }
