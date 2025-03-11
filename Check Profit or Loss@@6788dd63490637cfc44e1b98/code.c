@@ -5,10 +5,8 @@ int main() {
     float cost_price, selling_price;
     
     // Taking input
-    printf("Enter the Cost Price (CP): ");
     scanf("%f", &cost_price);
-    
-    printf("Enter the Selling Price (SP): ");
+
     scanf("%f", &selling_price);
 
     // Checking profit or loss
