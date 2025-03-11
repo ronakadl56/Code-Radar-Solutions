@@ -12,8 +12,8 @@ void convertToUppercase(char *str) {
 
 int main() {
     char str[100];
-
-    scanf("%s\n", str);
+    
+    scanf("%99s", str); // Using %99s to avoid buffer overflow
     
     convertToUppercase(str);
     
