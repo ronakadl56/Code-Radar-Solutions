@@ -13,11 +13,11 @@ void convertToUppercase(char *str) {
 int main() {
     char str[100];
 
-    scanf("%s", str);
+    scanf(" %s", str);
     
     convertToUppercase(str);
     
-    printf("%s\n", str);
+    printf(" %s\n", str);
     
     return 0;
 }
