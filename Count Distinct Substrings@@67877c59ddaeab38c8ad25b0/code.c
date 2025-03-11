@@ -35,7 +35,7 @@ int countDistinctSubstrings(char *str) {
     }
     
     free(suffixArray);
-    return count + 1; 
+    return count; // Remove the additional 1
 }
 
 int main() {
