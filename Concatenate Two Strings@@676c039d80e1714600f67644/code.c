@@ -26,7 +26,7 @@ int main() {
 
     concatenate(str1, str2);
 
-    printf("Concatenated String: %s\n", str1);
+    printf("%s\n", str1);
 
     return 0;
 }
