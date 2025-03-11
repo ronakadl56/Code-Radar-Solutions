@@ -43,12 +43,11 @@ char* largestPalindromicSubstring(char *str) {
 int main() {
     char str[100];
 
-    printf("Enter a string: ");
     scanf("%99s", str); // Using %99s to avoid buffer overflow
 
     char *result = largestPalindromicSubstring(str);
 
-    printf("Largest palindromic substring: %s\n", result);
+    printf("%s\n", result);
 
     free(result);  // Free the allocated memory
     return 0;
