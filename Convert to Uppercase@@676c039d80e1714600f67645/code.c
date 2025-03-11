@@ -17,7 +17,7 @@ int main() {
     
     convertToUppercase(str);
     
-    printf("Uppercase string: %s\n", str);
+    printf("%s\n", str);
     
     return 0;
 }
