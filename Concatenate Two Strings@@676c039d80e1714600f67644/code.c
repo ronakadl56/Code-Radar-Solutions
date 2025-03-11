@@ -12,7 +12,7 @@ int main() {
     for (i = 0; str1[i] != '\0'; i++);
 
 
-    if (str2[0] == ' ') {
+    if (str2[0] == '') {
         j = 1;  
     } else {
         j = 0;
