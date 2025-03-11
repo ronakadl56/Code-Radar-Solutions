@@ -1,32 +1,32 @@
 #include <stdio.h>
 
-int main() {
-    char str1[100], str2[50];
-    int i, j;
+// Function to concatenate two strings
+void concatenate(char str1[], char str2[]) {
+    int i = 0, j = 0;
 
-    scanf(" %[^\n]", str1);  
-   
-    scanf(" %[^\n]", str2);  
-
-   
-    for (i = 0; str1[i] != '\0'; i++);
-
-
-    if (str2[0] == ' ') {
-        j = 1;  
-    } else {
-        j = 0;
+    // Find the end of the first string
+    while (str1[i] != '\0') {
+        i++;
     }
 
-    str1[i] = '';
-    i++;
-
-    for (; str2[j] != '\0'; j++, i++) {
+    // Append the second string to the first string
+    while (str2[j] != '\0') {
         str1[i] = str2[j];
+        i++;
+        j++;
     }
-    str1[i] = '\0';
 
-    printf("%s\n", str1);
+    // Add the null terminator at the end
+    str1[i] = '\0';
+}
+
+int main() {
+    char str1[100] = "Hello, ";
+    char str2[] = "World!";
+
+    concatenate(str1, str2);
+
+    printf("Concatenated String: %s\n", str1);
 
     return 0;
 }
