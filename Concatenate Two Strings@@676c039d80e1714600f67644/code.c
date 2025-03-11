@@ -21,8 +21,8 @@ void concatenate(char str1[], char str2[]) {
 }
 
 int main() {
-    char str1[100] = "Hello, ";
-    char str2[] = "World!";
+    char str1[100];
+    char str2[];
 
     concatenate(str1, str2);
 
