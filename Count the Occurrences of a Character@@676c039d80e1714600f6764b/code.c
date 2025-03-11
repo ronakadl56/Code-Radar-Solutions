@@ -23,7 +23,7 @@ int main() {
     int occurrences = countCharOccurrences(str, charToCount);
 
 
-    printf("%d\n"occurrences);
+    printf("%d\n",occurrences);
 
     return 0;
 }
