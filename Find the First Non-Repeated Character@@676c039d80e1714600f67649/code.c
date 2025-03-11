@@ -2,13 +2,15 @@
 #include <string.h>
 
 char firstNonRepeatedChar(char *str) {
-    int count[256] = {0}; 
+    int count[256] = {0};  // Array to store count of characters
     int i;
 
+    // Count the occurrences of each character
     for (i = 0; str[i]; i++) {
         count[(unsigned char)str[i]]++;
     }
 
+    // Find the first non-repeated character
     for (i = 0; str[i]; i++) {
         if (count[(unsigned char)str[i]] == 1) {
             return str[i];
@@ -27,6 +29,8 @@ int main() {
     
     if (result != '\0') {
         printf("%c\n", result);
+    } else {
+        printf("No non-repeated character found\n");
     }
     
     return 0;
