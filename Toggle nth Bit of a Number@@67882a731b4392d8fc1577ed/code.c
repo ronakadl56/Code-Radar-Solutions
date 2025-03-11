@@ -1,9 +1,12 @@
 #include <stdio.h>
+int toggleNthBit(int num, int n) {
+    return num ^ (1 << n);
+}
 int main() {
-    int a, b, c;
-    scanf("%d%d", &a, &b);
-    int mask = ~(1 << b);
-    c = a & mask;
-    printf("%d", c);
+    int num, n;
+    scanf("%d", &num);
+    scanf("%d", &n);
+    int updatedNum = toggleNthBit(num, n);
+    printf("%d\n", updatedNum);
     return 0;
 }
