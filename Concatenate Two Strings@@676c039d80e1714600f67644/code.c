@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+// Function to concatenate two strings
 void concatenate(char str1[], char str2[]) {
     int i = 0, j = 0;
 
@@ -22,17 +23,15 @@ void concatenate(char str1[], char str2[]) {
 int main() {
     char str1[100], str2[100];
 
-    // Read two strings from input
-    fgets(str1, sizeof(str1), stdin);
-    fgets(str2, sizeof(str2), stdin);
+    scanf("%[^\n]%*c", str1);  // Read a line of text until newline is encountered
 
-    // Remove the newline character from the end of the strings
-    str1[strcspn(str1, "\n")] = 0;
-    str2[strcspn(str2, "\n")] = 0;
 
-    // Concatenate the strings
+    scanf("%[^\n]%*c", str2);  // Read a line of text until newline is encountered
+
+
     concatenate(str1, str2);
 
+    // Print the concatenated string
     printf("%s\n", str1);
 
     return 0;
