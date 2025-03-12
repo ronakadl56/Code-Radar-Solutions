@@ -1,14 +1,15 @@
-// Your code here...
 #include <stdio.h>
 
 int main() {
-    float num1, num2;
+    int num1, num2;
+    printf("Enter two space-separated integers: ");
+    scanf("%d %d", &num1, &num2);
 
-    scanf("%f %f", &num1, &num2);
-
-    if (num1 > num2)
+    if (num1 >= num2) {
         printf("Yes\n");
-    else if (num1 == num2)
+    } else {
         printf("No\n");
+    }
+
     return 0;
 }
