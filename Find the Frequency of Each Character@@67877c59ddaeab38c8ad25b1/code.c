@@ -2,7 +2,7 @@
 #include <string.h>
 
 void findFrequency(char str[]) {
-    int freq[256] = {0}; 
+    int freq[256] = {0}; // Array to store frequency of each character
 
     for(int i = 0; str[i] != '\0'; i++) {
         freq[(unsigned char)str[i]]++;
@@ -17,7 +17,7 @@ void findFrequency(char str[]) {
 
 int main() {
     char str[100];
-    scanf("%[^\n]%*c", str);
+    scanf("%s", str); 
 
     findFrequency(str);
 
