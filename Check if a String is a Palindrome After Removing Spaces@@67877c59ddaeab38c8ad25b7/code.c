@@ -2,15 +2,15 @@
 #include <string.h>
 #include <ctype.h> // For isspace and tolower functions
 
-void removeSpacesAndConvertToLower(char str[]) {
+void removeSpacesAndConvertToLower(char str[], char cleanedStr[]) {
     int index = 0;
 
     for(int i = 0; str[i] != '\0'; i++) {
         if(!isspace(str[i])) {
-            str[index++] = tolower(str[i]);
+            cleanedStr[index++] = tolower(str[i]);
         }
     }
-    str[index] = '\0'; // Null-terminate the string
+    cleanedStr[index] = '\0'; // Null-terminate the string
 }
 
 int isPalindrome(char str[]) {
@@ -27,11 +27,13 @@ int isPalindrome(char str[]) {
 
 int main() {
     char str[1000];
+    char cleanedStr[1000];
+ 
     scanf(" %[^\n]", str); 
 
-    removeSpacesAndConvertToLower(str);
+    removeSpacesAndConvertToLower(str, cleanedStr);
 
-    if(isPalindrome(str)) {
+    if(isPalindrome(cleanedStr)) {
         printf("Yes\n");
     } else {
         printf("No\n");
