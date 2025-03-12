@@ -22,18 +22,17 @@ int isPalindrome(char str[]) {
         }
     }
 
-    return 1; 
+    return 1; // It's a palindrome
 }
 
 int main() {
     char str[1000];
     char cleanedStr[1000];
- 
-    scanf(" %[^\n]", str); 
+    scanf(" %[^\n]", str); // Use " %[^\n]" to read input including spaces
 
     removeSpacesAndConvertToLower(str, cleanedStr);
 
-    if(isPalindrome(cleanedStr)) {
+    if(strlen(cleanedStr) == 0 || isPalindrome(cleanedStr)) {
         printf("Yes\n");
     } else {
         printf("No\n");
