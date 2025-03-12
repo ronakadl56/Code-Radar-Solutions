@@ -1,29 +1,29 @@
 #include <stdio.h>
 #include <string.h>
 
-void findFrequency(char *str) {
-    int count[256] = {0};  // Array to store frequency of each character
-    int len = strlen(str);
+void findFrequency(char str[]) {
+    int freq[256] = {0}; // Array to store frequency of each character
 
-    // Count the frequency of each character
-    for (int i = 0; i < len; i++) {
-        count[(unsigned char)str[i]]++;
+    for(int i = 0; str[i] != '\0'; i++) {
+        freq[(unsigned char)str[i]]++;
     }
 
-    // Display the frequency of each character
-    for (int i = 0; i < 256; i++) {
-        if (count[i] > 0) {
-            printf("%c: %d\n", i, count[i]);
+    printf("Character Frequency\n");
+    for(int i = 0; i < 256; i++) {
+        if(freq[i] != 0) {
+            printf("%c: %d\n", i, freq[i]);
         }
     }
 }
 
 int main() {
     char str[100];
-    
-    scanf("%s", str);
-    
+    fgets(str, sizeof(str), stdin);
+
+    // Remove newline character from string
+    str[strcspn(str, "\n")] = '\0';
+
     findFrequency(str);
-    
+
     return 0;
 }
