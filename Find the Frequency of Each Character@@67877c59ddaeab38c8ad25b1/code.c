@@ -11,7 +11,7 @@ void findFrequency(char str[]) {
 
     for(int i = 0; str[i] != '\0'; i++) {
         if(!printed[(unsigned char)str[i]]) {
-            printf("%c: %d\n", str[i], freq[(unsigned char)str[i]]);
+            printf("%c:%d\n", str[i], freq[(unsigned char)str[i]]);
             printed[(unsigned char)str[i]] = 1;
         }
     }
@@ -19,7 +19,7 @@ void findFrequency(char str[]) {
 
 int main() {
     char str[100];
-    scanf("%s", str); 
+    scanf(" %[^\n]", str); 
 
     findFrequency(str);
 
