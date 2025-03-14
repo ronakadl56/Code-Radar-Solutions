@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+#define MAX_SIZE 100
+
 // Function to sort an array using Selection Sort
 void selectionSort(char arr[], int n) {
     for (int i = 0; i < n - 1; i++) {
@@ -34,7 +36,13 @@ int main() {
 
     // Read the number of characters
     scanf("%d", &n);
-    char arr[n];
+
+    if (n <= 0 || n > MAX_SIZE) {
+        printf("Invalid input size.\n");
+        return 1;
+    }
+
+    char arr[MAX_SIZE];
 
     // Read the characters from input
     for (int i = 0; i < n; i++) {
