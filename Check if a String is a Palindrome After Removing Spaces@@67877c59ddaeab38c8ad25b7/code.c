@@ -1,38 +1,39 @@
 #include <stdio.h>
+#include <ctype.h>
 #include <string.h>
-#include <ctype.h> // For isspace and tolower functions
-
-void removeSpacesAndConvertToLower(char str[], char cleanedStr[]) {
-    int index = 0;
-
-    for(int i = 0; str[i] != '\0'; i++) {
-        if(!isspace(str[i])) {
-            cleanedStr[index++] = tolower(str[i]);
-        }
-    }
-    cleanedStr[index] = '\0'; // Null-terminate the string
-}
 
 int isPalindrome(char str[]) {
-    int len = strlen(str);
+    char cleanedStr[1000];
+    int j = 0;
 
-    for(int i = 0; i < len / 2; i++) {
-        if(str[i] != str[len - 1 - i]) {
-            return 0; // Not a palindrome
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (str[i] != ' ') {
+            cleanedStr[j++] = tolower(str[i]);
         }
     }
+    cleanedStr[j] = '\0';
 
-    return 1; // It's a palindrome
+    int left = 0;
+    int right = strlen(cleanedStr) - 1;
+    while (left < right) {
+        if (cleanedStr[left] != cleanedStr[right]) {
+            return 0; 
+        }
+        left++;
+        right--;
+    }
+
+    return 1; 
 }
 
 int main() {
     char str[1000];
-    char cleanedStr[1000];
-    scanf(" %[^\n]", str); // Use " %[^\n]" to read input including spaces
 
-    removeSpacesAndConvertToLower(str, cleanedStr);
+    fgets(str, sizeof(str), stdin);
 
-    if(strlen(cleanedStr) == 0 || isPalindrome(cleanedStr)) {
+    str[strcspn(str, "\n")] = '\0';
+
+    if (isPalindrome(str)) {
         printf("Yes\n");
     } else {
         printf("No\n");
