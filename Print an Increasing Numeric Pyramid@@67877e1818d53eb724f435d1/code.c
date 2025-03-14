@@ -1,17 +1,19 @@
 #include <stdio.h>
 
 int main() {
-    int rows;
-
+    int rows, num = 1;
     scanf("%d", &rows);
 
     for (int i = 1; i <= rows; i++) {
-        // Print numbers in increasing order
-        for (int j = 1; j <= i; j++) {
-            printf("%d ", j);
+        for (int j = 1; j <= rows - i; j++) {
+            printf(" ");
         }
 
-        // Move to the next line
+        for (int j = 1; j <= i; j++) {
+            printf("%d ", num);
+            num++;
+        }
+
         printf("\n");
     }
 
