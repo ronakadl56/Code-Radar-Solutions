@@ -11,7 +11,7 @@ struct Student {
 char getGrade(float marks) {
     if (marks >= 85) {
         return 'A';
-    } else if (marks >= 70 && marks <= 84) {
+    } else if (marks >= 70 && marks < 85) {  // Corrected the condition here
         return 'B';
     } else {
         return 'C';
