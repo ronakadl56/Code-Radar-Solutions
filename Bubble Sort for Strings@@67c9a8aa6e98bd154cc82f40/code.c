@@ -1,17 +1,13 @@
 #include <stdio.h>
 #include <string.h>
 
-#define MAX 100
-#define MAX_LEN 100
-
-// Function to perform bubble sort on an array of strings
-void bubbleSort(char arr[][MAX_LEN], int n) {
+// Function to sort an array of strings using Bubble Sort
+void bubbleSort(char arr[][100], int n) {
     for (int i = 0; i < n - 1; i++) {
         for (int j = 0; j < n - i - 1; j++) {
-            // Compare adjacent strings
+            // Compare adjacent strings and swap if they are in the wrong order
             if (strcmp(arr[j], arr[j + 1]) > 0) {
-                // Swap the strings
-                char temp[MAX_LEN];
+                char temp[100];
                 strcpy(temp, arr[j]);
                 strcpy(arr[j], arr[j + 1]);
                 strcpy(arr[j + 1], temp);
@@ -20,25 +16,32 @@ void bubbleSort(char arr[][MAX_LEN], int n) {
     }
 }
 
-int main() {
-    int n;
-    char arr[MAX][MAX_LEN];
+// Function to print an array of strings
+void printArray(char arr[][100], int n) {
+    for (int i = 0; i < n; i++) {
+        printf("%s\n", arr[i]);
+    }
+}
 
-    // Input the number of strings
+// Main function where program execution starts
+int main() {
+    int n; // Variable to store the number of strings
+
+    // Read the number of strings from user input
     scanf("%d", &n);
 
-    // Input the strings
+    char arr[n][100]; // Declare an array of strings with max length 100
+
+    // Read the strings from user input
     for (int i = 0; i < n; i++) {
         scanf("%s", arr[i]);
     }
 
-    // Sort the array of strings
+    // Call the bubbleSort function
     bubbleSort(arr, n);
 
-    // Output the sorted array
-    for (int i = 0; i < n; i++) {
-        printf("%s\n", arr[i]);
-    }
+    // Display the sorted array of strings
+    printArray(arr, n);
 
-    return 0;
+    return 0; // Indicate successful program termination
 }
