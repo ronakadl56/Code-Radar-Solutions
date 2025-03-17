@@ -1,25 +1,23 @@
-#include <stdio.h>
-
-int main() {
-    int N;
-    scanf("%d", &N); // Read the size of the array
-
-    int array[N];
-    for (int i = 0; i < N; i++) {
-        scanf("%d", &array[i]); // Read the array elements
+#include<stdio.h>
+#include <limits.h>
+int main(){
+    int n;
+    scanf("%d",&n);
+    int arr[n];
+    for(int i=0;i<n;i++){
+        scanf("%d",&arr[i]);
     }
-
-    int largestEven = -1; // Initialize with -1 to indicate no even number found yet
-
-    for (int i = 0; i < N; i++) {
-        if (array[i] % 2 == 0) { // Check if the number is even
-            if (array[i] > largestEven) {
-                largestEven = array[i]; // Update the largest even number
+    int max=INT_MIN;
+    for(int i=0;i<n;i++){
+        if(arr[i]%2==0){
+            if(arr[i]>max){
+                max=arr[i];
             }
         }
     }
-
-    printf("%d\n", largestEven); // Output the largest even number or -1
-
-    return 0;
+    if(max==INT_MIN){
+        printf("-1");
+    }else{
+        printf("%d",max);
+    }
 }
