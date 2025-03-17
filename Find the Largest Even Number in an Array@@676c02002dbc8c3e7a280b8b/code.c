@@ -1,19 +1,25 @@
 #include <stdio.h>
 
 int main() {
-    int n; // number of elements
-    scanf("%d", &n);
-    
-    int x, result = 0;
-    
-    // Assuming you want to calculate the minimum of the inputs
-    for (int i = 0; i < n; i++) {
-        scanf("%d", &x);
-        if (i == 0 || x < result) {
-            result = x;  // Initialize or find the minimum
+    int N;
+    scanf("%d", &N); // Read the size of the array
+
+    int array[N];
+    for (int i = 0; i < N; i++) {
+        scanf("%d", &array[i]); // Read the array elements
+    }
+
+    int largestEven = -1; // Initialize with -1 to indicate no even number found yet
+
+    for (int i = 0; i < N; i++) {
+        if (array[i] % 2 == 0) { // Check if the number is even
+            if (array[i] > largestEven) {
+                largestEven = array[i]; // Update the largest even number
+            }
         }
     }
-    
-    printf("%d\n", result);
+
+    printf("%d\n", largestEven); // Output the largest even number or -1
+
     return 0;
 }
